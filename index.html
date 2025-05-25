@@ -30,7 +30,26 @@
             box-shadow: 0 0 0 0.2rem rgba(28, 200, 138, 0.5);
         }
 
- 
+        @media (max-width: 576px) {
+
+            h4,
+            .lead {
+                font-size: 1.5rem !important;
+            }
+
+            .form-control {
+                font-size: 1.1rem;
+            }
+
+            button,
+            select {
+                font-size: 1rem;
+            }
+
+            .btn {
+                padding: 10px 14px;
+            }
+        }
     </style>
 </head>
 
@@ -62,13 +81,14 @@
                 <strong>KQ: {{ item.result || 0 }}</strong>
             </div>
             <div class="col-md-2">
-                <button class="btn btn-danger btn-sm" ng-click="removeItem($index)"><i class="fa-solid fa-trash"></i> Xoá</button>
+                <button class="btn btn-danger btn-sm" ng-click="removeItem($index)"><i class="fa-solid fa-trash"></i>
+                    Xoá</button>
             </div>
         </div>
     </div>
 
     <button class="btn btn-primary mb-3 custom-btn" ng-click="addItem()">
-       <i class="fa-solid fa-plus"></i> Thêm mục
+        <i class="fa-solid fa-plus"></i> Thêm mục
     </button>
 
 
