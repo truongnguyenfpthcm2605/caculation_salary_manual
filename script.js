@@ -60,4 +60,25 @@ angular.module('salaryApp', [])
         };
 
 
+        $scope.parseValue = function (item) {
+            let raw = item.displayValue?.toString().replace(/[^\d]/g, '');
+            item.value = parseFloat(raw) || 0;
+            $scope.updateResult(item);
+        };
+
+        $scope.formatValue = function (item) {
+            item.displayValue = item.value.toLocaleString('vi-VN');
+        };
+
+        $scope.parseOperand = function (item) {
+            let raw = item.displayOperand?.toString().replace(/[^\d]/g, '');
+            item.operand = parseFloat(raw) || 0;
+            $scope.updateResult(item);
+        };
+
+        $scope.formatOperand = function (item) {
+            item.displayOperand = item.operand.toLocaleString('vi-VN');
+        };
+
+
     });

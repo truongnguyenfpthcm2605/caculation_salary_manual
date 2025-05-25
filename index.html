@@ -58,15 +58,15 @@
 
     <div class="form-group" ng-repeat="item in items track by $index" class="mb-2">
         <div class="row mb-2 align-items-center">
-            <div class="col-md-3">
+            <div class="col-md-2">
                 <input type="text" class="form-control" placeholder="Tiêu đề" ng-model="item.title">
             </div>
             <div class="col-md-2">
-                <input type="number" class="form-control" ng-model="item.value" 
-                    ng-change="updateResult(item)">
+                <input type="text" class="form-control"  ng-model="item.displayValue"
+                    ng-blur="formatValue(item)" ng-change="parseValue(item)">
             </div>
-            <div class="col-md-1">
-                <select class="form-control" ng-model="item.operator" ng-change="updateResult(item)">
+            <div class="col-md-2">
+                <select class="form-control" style="font-weight: bold; color: red; " ng-model="item.operator" ng-change="updateResult(item)">
                     <option value="+">+</option>
                     <option value="-">-</option>
                     <option value="*">×</option>
@@ -74,8 +74,8 @@
                 </select>
             </div>
             <div class="col-md-2">
-                <input type="number" class="form-control"  ng-model="item.operand"
-                    ng-change="updateResult(item)">
+                <input type="text" class="form-control"  ng-model="item.displayOperand"
+                    ng-blur="formatOperand(item)" ng-change="parseOperand(item)">
             </div>
             <div class="col-md-2">
                 <strong>KQ: {{ item.result || 0 }}</strong>
