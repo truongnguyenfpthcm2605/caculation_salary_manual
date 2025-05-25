@@ -54,7 +54,7 @@
 </head>
 
 <body class="container mt-5">
-    <h2 class="mb-4 ">HÃY NHẬP THÔNG TIN LƯƠNG</h2>
+    <h2 class="mb-4" style="color: green; font-weight: bold; font-style: italic;">HÃY NHẬP THÔNG TIN LƯƠNG</h2>
 
     <div class="form-group" ng-repeat="item in items track by $index" class="mb-2">
         <div class="row mb-2 align-items-center">
@@ -62,7 +62,7 @@
                 <input type="text" class="form-control" placeholder="Tiêu đề" ng-model="item.title">
             </div>
             <div class="col-md-2">
-                <input type="number" class="form-control" ng-model="item.value" placeholder="Số tiền"
+                <input type="number" class="form-control" ng-model="item.value" 
                     ng-change="updateResult(item)">
             </div>
             <div class="col-md-1">
@@ -74,7 +74,7 @@
                 </select>
             </div>
             <div class="col-md-2">
-                <input type="number" class="form-control" placeholder="Số" ng-model="item.operand"
+                <input type="number" class="form-control"  ng-model="item.operand"
                     ng-change="updateResult(item)">
             </div>
             <div class="col-md-2">
