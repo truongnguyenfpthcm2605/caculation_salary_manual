@@ -78,7 +78,8 @@
                     ng-blur="formatOperand(item)" ng-change="parseOperand(item)">
             </div>
             <div class="col-md-2">
-                <strong>KQ: {{ item.result || 0 }}</strong>
+            <strong>KQ: {{ (item.result || 0) | currency:'':0 }} ₫</strong>
+
             </div>
             <div class="col-md-2">
                 <button class="btn btn-danger btn-sm" ng-click="removeItem($index)"><i class="fa-solid fa-trash"></i>
