@@ -80,5 +80,9 @@ angular.module('salaryApp', [])
             item.displayOperand = item.operand.toLocaleString('vi-VN');
         };
 
+        $scope.closeAll = function() {
+            $scope.items = [];
+        }
+
 
     });

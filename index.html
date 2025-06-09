@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Tính lương động</title>
+    <title>Hi! Bro</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -54,7 +54,7 @@
 </head>
 
 <body class="container mt-5">
-    <h2 class="mb-4" style="color: green; font-weight: bold; font-style: italic;">HÃY NHẬP THÔNG TIN LƯƠNG</h2>
+    <h2 class="mb-4" style="color: green; font-weight: bold; font-style: italic;">THÔNG TIN TÍNH TOÁN</h2>
 
     <div class="form-group" ng-repeat="item in items track by $index" class="mb-2">
         <div class="row mb-2">
@@ -94,6 +94,10 @@
 
     <button class="btn btn-primary mb-3 custom-btn" ng-click="addItem()">
         <i class="fa-solid fa-plus"></i> Thêm mục
+    </button>
+
+    <button class="btn btn-danger mb-3 " ng-click="closeAll()">
+        <i class="fa-solid fa-trash"></i> Xóa tất cả
     </button>
 
 
